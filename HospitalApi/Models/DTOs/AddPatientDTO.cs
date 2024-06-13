@@ -1,10 +1,9 @@
-namespace HospitalApi.Entities;
+namespace HospitalApi.Models.DTOs;
 
-public class Patient
+public class AddPatientDTO
 {
     public int IdPatient { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public DateTime BirthDate { get; set; }
-    public ICollection<Prescription> Prescriptions { get; set; }
 }

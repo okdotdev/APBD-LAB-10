@@ -1,6 +1,8 @@
-namespace HospitalApi.Entities;
+using HospitalApi.Entities;
 
-public class PrescriptionMedicament
+namespace HospitalApi.Models;
+
+public class Prescription_Medicament
 {
     public int IdPrescription { get; set; }
     public Prescription Prescription { get; set; }

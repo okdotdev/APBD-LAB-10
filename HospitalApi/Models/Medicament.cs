@@ -1,4 +1,4 @@
-namespace HospitalApi.Entities;
+namespace HospitalApi.Models;
 
 public class Medicament
 {
@@ -6,5 +6,6 @@ public class Medicament
     public string Name { get; set; }
     public string Description { get; set; }
     public string Type { get; set; }
-    public IEnumerable<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
+    public virtual ICollection<Prescription_Medicament> PrescriptionMedicaments { get; set; } =
+        new List<Prescription_Medicament>();
 }

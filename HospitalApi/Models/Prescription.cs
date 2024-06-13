@@ -1,4 +1,6 @@
-namespace HospitalApi.Entities;
+using HospitalApi.Entities;
+
+namespace HospitalApi.Models;
 
 public class Prescription
 {
@@ -9,6 +11,7 @@ public class Prescription
     public Patient Patient { get; set; }
     public int IdDoctor { get; set; }
     public Doctor Doctor { get; set; }
-    public ICollection<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
-}
 
+    public virtual ICollection<Prescription_Medicament> PrescriptionMedicaments { get; set; } =
+        new List<Prescription_Medicament>();
+}
